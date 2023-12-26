@@ -16,7 +16,6 @@ object BindingAdapters {
 
     @JvmStatic
     @BindingAdapter("imageUri")
-
     fun setImageUrl(imageView:ImageView, url: String?){
         try{
             url?.let {
