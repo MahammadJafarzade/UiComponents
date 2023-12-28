@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ViewBindingAdapters</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="nav_menu_home">Ana Sayfa</string>
+    <string name="nav_menu_products">Ürünler</string>
 </resources>

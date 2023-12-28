@@ -2,6 +2,8 @@ package com.example.viewbindingadapters
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.viewbindingadapters.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -11,7 +13,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.isVisible = true
-        binding.imageUri = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Recep_Tayyip_Erdogan_in_Ukraine.jpg/330px-Recep_Tayyip_Erdogan_in_Ukraine.jpg"
-    }
+        var navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        val navController = navHostFragment.navController
+        binding.bottomNavigation.setupWithNavController(navController)
+  }
 }

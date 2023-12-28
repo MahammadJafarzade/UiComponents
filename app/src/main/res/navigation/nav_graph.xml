@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.viewbindingadapters.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_productsFragment"
+            app:destination="@id/productsFragment"></action>
+        <action
+            android:id="@+id/action_menuFragment_to_productDetail"
+            app:destination="@id/productsDetail"></action>    </fragment>
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.example.viewbindingadapters.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" >
+<!--        <argument-->
+<!--            android:name="userID"-->
+<!--            app:argType="string"-->
+<!--            android:defaultValue="-"-->
+<!--            />-->
+<!--        <argument-->
+<!--            android:name="productID"-->
+<!--            app:argType="integer"-->
+<!--            />-->
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.viewbindingadapters.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.viewbindingadapters.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/productsDetail"
+        android:name="com.example.viewbindingadapters.ProductsDetail"
+        android:label="fragment_products_detail"
+        tools:layout="@layout/fragment_products_detail" />
+
+
+</navigation>
